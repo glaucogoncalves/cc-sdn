@@ -7,7 +7,7 @@ A atividade trabalha a implantação de um controlador ONOS para controle de uma
 ## **Pré-requisitos**
 
 - Conta AWS ativa.
-- **Chave PEM** (arquivo `.pem`) gerada durante a criação das instâncias EC2.
+- Chave PEM (arquivo `.pem`) gerada durante a criação das instâncias EC2.
 - Familiaridade com SSH e comandos de shell no linux.
 
 ---
@@ -74,7 +74,7 @@ Execute o comando abaixo para obter a imagem do container do ONOS
 sudo docker pull onosproject/onos
 ```
 
-Em seguida, execute o ONOS
+Em seguida, **execute o ONOS**
 
 ```bash
 sudo docker run -d -p 8181:8181 -p 6653:6653 onosproject/onos
@@ -188,7 +188,7 @@ Ainda no CLI do Mininet, execute um `ping` do host `h1` para `h3` usando o coman
 h1 ping h3
 ```
 
-Deixe executando e acesse a opção *Devices* na WebUI do ONOS. Selecione o switch `of:0000000000000002` e clique em *Show flow view for selected device* (terceiro ícone no alto do lado direito). Esta tela vai mostrar os fluxos Openflow instalados pelo controlador para tratar o ping. Analise e procure entender a lógica dos fluxos a partir do que vimos em sala. Você pode interromper o ping (digitando *Ctrl+C* no CLI do Mininet) e verificar quais fluxos são removidos.
+Deixe executando e acesse a opção *Devices* na WebUI do ONOS. Selecione o switch `of:0000000000000002` e clique em *Show flow view for selected device* (terceiro ícone no alto do lado direito). Esta tela vai mostrar **os fluxos Openflow instalados pelo controlador** para tratar o ping. Analise e procure entender a lógica dos fluxos a partir do que vimos em sala. Você pode interromper o ping (digitando *Ctrl+C* no CLI do Mininet) e verificar quais fluxos são removidos.
 
 ### **Firewall**
 
@@ -286,7 +286,7 @@ Repita o comando `pingall` no CLI do Mininet. Você vai observar que não há ma
 
 ### **Virtual Private LAN Service (VPLS)**
 
-Neste caso de uso, vamos implementar uma VPLS que é uma rede multiponto de hosts geograficamente separados que compartilham um enlace de broadcast, ou seja, os sistemas finais que pertencem à VPLS se comunicam como se estivessem em uma LAN. Como exemplo, criaremos uma VPLS entre os hosts `h1`, `h2` e `h4`. Desta forma o host `h3` restará inacessível a esta rede.
+Neste caso de uso, vamos implementar uma VPLS que é uma rede multiponto de hosts geograficamente separados que compartilham um enlace de broadcast, ou seja, **os sistemas finais que pertencem à VPLS se comunicam como se estivessem em uma LAN**. Como exemplo, criaremos uma VPLS entre os hosts `h1`, `h2` e `h4`. Desta forma o host `h3` restará inacessível a esta rede.
 
 Neste caso de uso, usaremos também a interface CLI do ONOS. Para este caso de uso você deve acessar sua instância EC2 com um terminal SSH diferente do terminal onde o Mininet está sendo executado.
 
