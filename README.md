@@ -121,7 +121,7 @@ Para instalar a imagem do mininet use o comando a seguir:
 sudo docker pull iwaseyusuke/mininet
 ```
 
-O comando abaixo executa o container Mininet. Observe que o diretório `netemu` é mapeado para o container (`-v`), deixando os arquivos deste diretório acessíveis internamente no container.
+O comando abaixo executa o container Mininet. Vocẽ deve executar o comando abaixo no diretório `cc-sdn`, portanto garanta que está neste diretório. Isso é necessário pois o diretório `netemu` é mapeado para o container (`-v`), deixando os arquivos deste diretório acessíveis internamente no container.
 
 ```bash
 sudo docker run -it --rm --privileged -v /lib/modules:/lib/modules -v ./netemu:/root/netemu  iwaseyusuke/mininet
