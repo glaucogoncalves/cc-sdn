@@ -92,6 +92,9 @@ Você deveria ver uma instância do container do ONOS, similar ao exposto abaixo
 CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS          PORTS                                                                                                                NAMES
 ae45172595a5   onosproject/onos   "./bin/onos-service …"   41 minutes ago   Up 41 minutes   6640/tcp, 0.0.0.0:6653->6653/tcp, :::6653->6653/tcp, 8101/tcp, 9876/tcp, 0.0.0.0:8181->8181/tcp, :::8181->8181/tcp   distracted_bhaskara
 ```
+
+Observe que, se tudo ocorreu bem, o status do conteiner fica como `Up`. Observe ainda que o container ganha um `CONTAINER ID` e um nome (neste caso `distracted_bhaskara`), escolhidos pelo Docker.
+
 ### **Configuração do ONOS**
 
 Como padrão, o ONOS possui três interfaces de gerenciamento diferentes: WebUI, CLI e RST API. Nesta prática iremos utilizar as três, iniciando pela WebUI. Para acessá-la, use umm navegador de sua escolha e acesse o endereço: `http://<IP-PUBLICO-DA-EC2>:8181/onos/ui`. Na tela de login use o usuário padrão `onos`e a senha `rocks`
