@@ -205,7 +205,7 @@ A configuração do firewall ocorre por meio de uma API REST. Para ver as regras
 
 Lendo o arquivo `firewall.csv`, é possível ver que bloquearemos o tráfego de h1 para h3 e de h2 para h4. Para instalar as regras de controle de acesso, acesse sua instância EC2 com um novo terminal SSH (ou seja, não use o mesmo terminal onde o Mininet está sendo executado).
 
-Em seguida, usando o editor de sua preferência, modifique o script `fw.py`, adicionando o IP de sua instância EC2 e execute-o:
+Em seguida, usando o editor de sua preferência, modifique o script `fw.py`, adicionando o IP público de sua instância EC2 e execute-o:
 
 ```bash
 python3 fw.py
@@ -222,13 +222,13 @@ h4 -> h1 X h3
 *** Results: 33% dropped (8/12 received)
 ```
 
-Para remover as regras de bloqueio, modique o arquivo `rm-fw.py` adicionando o IP de sua instância EC2 e execute-o.
+Para remover as regras de bloqueio, modique o arquivo `rm-fw.py` adicionando o IP público de sua instância EC2 e execute-o.
 
 ```bash
 python3 rm-fw.py
 ```
 
- Verifique a remoção das regras pela API REST no navegador e teste com o comando `pingall`. Sua saída deve ser como abaixo:
+Verifique a remoção das regras pela API REST no navegador e teste com o comando `pingall`. Sua saída deve ser como abaixo:
 
 ```bash
 *** Ping: testing ping reachability
@@ -373,6 +373,6 @@ h4 -> h1 h2 X
 *** Results: 50% dropped (6/12 received)
 ```
 
-Uma VPLS do ONOS é criada utilizando o conceito de *Intents* que vimos anteriormente. Pela WebUI, acesse a aopção *Intents* do menu hamburguer e verifique os intents criados. Aqui três SinglePointToMultiPointIntents foram criados. Estes servem para comunicar o tráfego broadcast (ARP) entre os hosts. Além disso, podemos ver que três MultiPointToSinglePointIntents foram criados, os quais são usados para o tráfego unicast.
+Uma VPLS do ONOS é criada utilizando o conceito de *Intents* que vimos anteriormente. Pela WebUI, acesse a opção *Intents* do menu hamburguer e verifique os intents criados. Aqui três SinglePointToMultiPointIntents foram criados. Estes servem para comunicar o tráfego broadcast (ARP) entre os hosts. Além disso, podemos ver que três MultiPointToSinglePointIntents foram criados, os quais são usados para o tráfego unicast.
 
 Para finalizar, adicione a interface do host `h3` à VPLS e reexecute o comando `pingall`. Agora todos os hosts devem estar se comunicando.
