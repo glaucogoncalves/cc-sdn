@@ -26,7 +26,7 @@ A atividade trabalha a implantação de um controlador ONOS para controle de uma
 
 3. Conectando-se via SSH
 
-   - Certifique-se de que as permissões da chave .pem estão configuradas corretamente:
+   - Se estiver usando Linux, certifique-se de que as permissões da chave .pem estão configuradas corretamente:
 
 ```bash
 chmod 400 /caminho/para/sua-chave.pem
