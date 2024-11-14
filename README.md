@@ -22,7 +22,7 @@ A atividade trabalha a implantação de um controlador ONOS para controle de uma
    - Clique em **Executar Instância**.
 
 2. Retorne à tela de instâncias e modifique o grupo de segurança:
-   - Adicione nas **Inbound Rules** a liberação para a porta `8181` para qualquer origem (`0.0.0.0/0`)
+   - Adicione nas **Inbound Rules** a liberação para a porta `8181`, protocolo `TCP`, para qualquer origem (`0.0.0.0/0`)
 
 3. Conectando-se via SSH
 
