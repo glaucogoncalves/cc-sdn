@@ -243,7 +243,7 @@ h4 -> h1 h2 h3
 
 Outra forma de realizar o encaminhamento de pacotes por meio do ONOS é através dos *Intents*, que se trata de uma funcionalidade do ONOS que permite especificar o comportamento da rede na forma de políticas, ao invés de mecanismos. Em outras palavras: diz-se a rede o que se deseja e não como fazer. O exemplo a seguir explora esta funcionalidade. Além disso, veremos o uso da API REST do ONOS.
 
-Antes de continuar, desative a aplicação *React Forwarding*. Isso vai fazer com que os hosts na rede tornem-se novamente inalcançáveis entre si.
+Antes de continuar, desative a aplicação *Reactive Forwarding*. Isso vai fazer com que os hosts na rede tornem-se novamente inalcançáveis entre si.
 
 Para usar a API REST acesse, usando seu navegador, a documentação na URL: `http://<IP-PUBLICO-DA-EC2>:8181/onos/v1/docs/`. Esta é uma documentação completa da API suportada pelo ONOS, e que pode ser diretamente executada nesta página.
 
